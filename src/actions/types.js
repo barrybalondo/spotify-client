@@ -1,0 +1,2 @@
+export const FETCH_PEOPLES = 'FETCH_PEOPLES';
+export const FETCH_PEOPLE = 'FETCH_PEOPLE';
