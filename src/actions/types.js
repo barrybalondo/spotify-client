@@ -1,3 +1,7 @@
 export const FETCH_PEOPLES = 'FETCH_PEOPLES';
 export const FETCH_PEOPLE = 'FETCH_PEOPLE';
 export const DELETE_PEOPLE = 'DELETE_PEOPLE';
+export const CREATE_PEOPLE = 'DELETE_PEOPLE';
+export const UPDATE_PEOPLE = 'UPDATE_PEOPLE';
+
+

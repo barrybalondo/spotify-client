@@ -3,6 +3,8 @@ import {
   FETCH_PEOPLES,
   FETCH_PEOPLE, 
   DELETE_PEOPLE,
+  CREATE_PEOPLE,
+  UPDATE_PEOPLE,
 } from './types';
 
 const SPOTIFY_API = 'http://localhost:3300/api';
@@ -23,6 +25,21 @@ export function fetchPeople(id) {
     type: FETCH_PEOPLE,
     payload: request
   };
+
+}
+
+export function createPeople(props) {
+  console.log(props);
+  const request = axios.post(`${SPOTIFY_API}/people/`, props)
+  return {
+    type: CREATE_PEOPLE,
+    payload: request
+  };
+
+}
+
+export function updatePeople(props) {
+
 
 }
 

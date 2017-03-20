@@ -22,7 +22,6 @@ class Index extends Component {
               Show
           </Link>
         </td>
-
       </tr>    
        
     );
@@ -39,8 +38,9 @@ class Index extends Component {
             <Link to="/people/new" className="btn btn-primary">
               Add People
             </Link>
+         <br/>
          </div>
-         <h3>Peoples</h3>
+         <br/>
          <table className="table">
           <thead>
             <tr>

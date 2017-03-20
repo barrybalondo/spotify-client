@@ -36,13 +36,13 @@ class Show extends Component {
           <button 
             onClick={this.onDeleteClick.bind(this)}
             className="btn btn-danger">Delete
-          </button>
+          </button>&nbsp;
           <Link to="/people">
-            <button className="btn btn-primary pull-right">Back</button>
+            <button className="btn btn-primary">Back</button>
           </Link>
           <br/><br/>
-          <div className="panel panel-default">
-            <div className="panel-body">
+          <div className="card-block">
+            <div className="card-text">
               <h4>ID: {this.props.peoples._id}</h4>  
               <h4>NAME: {this.props.peoples.name}</h4>    
               <h4>FAVORITE  CITY: {this.props.peoples.favoriteCity}</h4>
@@ -50,6 +50,7 @@ class Show extends Component {
           </div>
         </div>
       </div>
+      
     )
 
   }
