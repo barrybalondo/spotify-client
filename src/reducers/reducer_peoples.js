@@ -8,7 +8,6 @@ export default function( state = INITIAL_STATE, action ) {
   switch (action.type) {
   
   case FETCH_PEOPLE:
-    
     return { ...state, people: action.payload.data } 
 
   case FETCH_PEOPLES:    

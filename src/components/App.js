@@ -5,7 +5,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h2>Welcome to Spotify Client</h2>
+        <h1 className="text-center">Spotify Client</h1>
         {this.props.children}
       </div>
     );
