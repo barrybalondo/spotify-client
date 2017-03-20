@@ -32,7 +32,9 @@ class Show extends Component {
     return (
       <div>
         <div className="container">
-          <button className="btn btn-primary">Edit</button>&nbsp;
+          <Link to={`/people/update/${this.props.peoples._id}`}>
+            <button className="btn btn-primary">Edit</button>
+          </Link>&nbsp;
           <button 
             onClick={this.onDeleteClick.bind(this)}
             className="btn btn-danger">Delete
@@ -45,7 +47,7 @@ class Show extends Component {
             <div className="card-text">
               <h4>ID: {this.props.peoples._id}</h4>  
               <h4>NAME: {this.props.peoples.name}</h4>    
-              <h4>FAVORITE  CITY: {this.props.peoples.favoriteCity}</h4>
+              <h4>FAVORITE CITY: {this.props.peoples.favoriteCity}</h4>
             </div>
           </div>
         </div>

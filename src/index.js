@@ -5,7 +5,7 @@ import { createStore, applyMiddleware } from 'redux';
 import ReduxPromise from 'redux-promise';
 import reducers from './reducers';
 
-import { Router, Route, browserHistory } from 'react-router';
+import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
 import App from './components/App';
 import PeoplesIndex from './containers/people/index';
@@ -19,9 +19,11 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <Router history={browserHistory}>
       <Route path="/" component={App}>  
+        <IndexRoute component={PeoplesIndex} />
         <Route path="/people" component={PeoplesIndex}/>
         <Route path="/people/new" component={PeopleNew}/>
         <Route path="/people/:id" component={PeopleShow}/>
+        <Route path="/people/update/:id" component={PeopleUpdate}/>
       </Route>
     </Router>
   </Provider>,

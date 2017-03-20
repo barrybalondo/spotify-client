@@ -7,7 +7,7 @@ import {
   UPDATE_PEOPLE,
 } from './types';
 
-const SPOTIFY_API = 'http://localhost:3300/api';
+const SPOTIFY_API = 'http://spotify-server-barry.herokuapp.com/api/';
 
 export function fetchPeoples() {
 
@@ -29,7 +29,6 @@ export function fetchPeople(id) {
 }
 
 export function createPeople(props) {
-  console.log(props);
   const request = axios.post(`${SPOTIFY_API}/people/`, props)
   return {
     type: CREATE_PEOPLE,
@@ -38,8 +37,13 @@ export function createPeople(props) {
 
 }
 
-export function updatePeople(props) {
-
+export function updatePeople(id, props) {
+  console.log(id, props);
+  const request = axios.put(`${SPOTIFY_API}/people/${id}`, props)
+  return {
+    type: UPDATE_PEOPLE,
+    payload: request
+  };
 
 }
 
